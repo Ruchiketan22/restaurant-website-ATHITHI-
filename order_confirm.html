@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            background-color: rgb(248, 232, 217);
+        }
+        header {
+            width: 100vw;
+            min-height: 100vh;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            width: 500px;
+            min-height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgb(250, 120, 69);
+            text-align: center;
+        }
+        h1 {
+            color: rgb(253, 57, 8);
+        }
+        .summary {
+            margin: 20px 0;
+        }
+        .summary h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .summary p {
+            color: #555;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: rgb(253, 57, 8);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: rgb(230, 50, 7);
+        }
+        i{
+           top: 20px;
+           right: 5vw;
+           position: absolute;
+           font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <i class="fa fa-xmark" id="hdcross"></i> 
+          </div>
+        <div class="container">
+            <div>
+                <h1>Order Confirmed</h1>
+                <div class="summary">
+                    <h3>Thank you for your purchase!</h3>
+                    <p>Your order is now being processed.</p>
+                    <p>Order Number: #12345678</p>
+                    <p>Payment Method: <span id="payment-method">N/A</span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // Retrieve the selected payment method from local storage and display it
+        const paymentMethod = localStorage.getItem('selectedPaymentMethod');
+        document.getElementById('payment-method').textContent = paymentMethod || 'N/A';
+
+            // Close button functionality
+            document.getElementById("hdcross").addEventListener("click", function() {
+          history.back(); // Navigates to the previous page
+        });
+    </script>
+</body>
+</html>
+
+

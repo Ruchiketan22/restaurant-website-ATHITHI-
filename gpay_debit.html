@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPay & Debit Payment</title>
+    <style>
+     *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+     } 
+     body{
+      background-color: rgb(248, 232,217);
+     }
+     header{
+        width: 100vw;
+        min-height: 100vh;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .container{
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0.5rem 1.5rem;
+        width: 500px;
+        min-height: 380px;
+        border-radius: 10px;
+        box-shadow: 0 10px 15px rgb(250, 120, 69);
+     }
+     form{
+        padding: 1rem;
+     }
+     h3{
+        margin-top: 1rem;
+        text-align: center;
+     }
+     form input[type="text"]{
+        width: 100%;
+        padding: 0.5rem 0.7rem;
+        margin: 0.5rem 0;
+        outline: none;
+     }
+     input[type="submit"]{
+        width: 100%;
+        display: inline-block;
+        color: rgb(253, 57, 8);
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: 0.5s;
+        letter-spacing: 4px;
+        border: none;
+        background-color: white;
+        padding: 10px 20px;
+        margin-top: 10px;
+     }
+     input[type="submit"]:hover{
+        background-color:rgb(253,57,8);
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgb(253,57,8),
+              0 0 25px rgb(253,57,8),
+              0 0 50px rgb(253,57,8),
+              0 0 100px rgb(253,57,8);
+     }
+    @media only screen and (max-width:770px){
+        .container{
+            flex-direction: column;
+        }
+        body{
+            overflow-y:hidden ;
+        }
+    }
+    i {
+        top: 20px;
+        right: 5vw;
+        position: absolute;
+        font-size: 25px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+      <div>
+         <i class="fa fa-xmark" id="hdcross"></i> 
+       </div>
+        <div class="container">
+            <div class="left">
+           <h3>PAYMENT</h3>
+           <form>Choose Payment Method
+           <br><br>
+           <input type="radio" id="gpay" name="payment-method" value="gpay">
+           <label for="gpay">Google Pay</label><br>
+           
+           <input type="radio" id="debit-card" name="payment-method" value="debit-card">
+           <label for="debit-card">Debit Card</label><br><br>
+
+           <!-- GPay Payment Details -->
+           <div id="gpay-details" style="display:none;">
+               GPay ID
+               <input type="text" name="gpay-id" placeholder="Enter GPay ID">
+           </div>
+
+           <!-- Debit Card Payment Details -->
+           <div id="debit-card-details" style="display:none;">
+               Debit card number
+               <input type="text" name="" placeholder="Enter card number">
+               Exp month
+               <input type="text" name="" placeholder="Enter Month">
+               <div id="zip">
+                   <label for="">
+                       Exp Year
+                       <select name="">
+                           <option value="">Choose Year..</option>
+                           <option>2022</option>
+                           <option>2023</option>
+                           <option>2024</option>
+                           <option>2025</option>
+                       </select>
+                   </label>
+                   <label>
+                      CVV 
+                      <input type="number" name="" placeholder="CVV">
+                   </label>
+               </div>
+           </div>
+           <input type="submit" name="" value="Proceed to Checkout">
+           </form> 
+        </div>
+        </div>
+    </header>
+    <script>
+      // Close button functionality
+      document.getElementById("hdcross").addEventListener("click", function() {
+        history.back(); // Navigates to the previous page
+      });
+
+      // Show/Hide payment method details
+      const gpayOption = document.getElementById('gpay');
+      const debitCardOption = document.getElementById('debit-card');
+      const gpayDetails = document.getElementById('gpay-details');
+      const debitCardDetails = document.getElementById('debit-card-details');
+
+      gpayOption.addEventListener('click', function() {
+          gpayDetails.style.display = 'block';
+          debitCardDetails.style.display = 'none';
+      });
+
+      debitCardOption.addEventListener('click', function() {
+          gpayDetails.style.display = 'none';
+          debitCardDetails.style.display = 'block';
+      });
+    </script>
+</body>
+</html>

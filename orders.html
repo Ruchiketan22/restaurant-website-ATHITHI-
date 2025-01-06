@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+    
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="Restaurant_management_system.html">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                           <input type="search"> 
+                           <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="R_M_S_Sign-in.html">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="">
+                            <li>Home</li>
+                        </a>
+                        <a href="aboutus.html">
+                            <li>About Us</li>
+                        </a>
+                        <a href="menu.html">
+                            <li>Food menu</li>
+                        </a>
+                        <a href="book.php">
+                            <li>Book table</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+                <div class="logo">
+                    <img src="C:\Users\ruket\practice\Inovative assingment\photos\logoo.png">
+                </div>
+                <div class="bar">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-xmark" id="hdcross"></i> 
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="Restaurant_management_system.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="aboutus.html">
+                            <li>About Us</li>
+                        </a>
+                        <a href="menu.html">
+                            <li>Food menu</li>
+                        </a>
+                        <a href="book.html">
+                            <li>Book table</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="account">
+                    <ul>
+                        <a href="Restaurant_management_system.html">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput2">
+                           <input type="search"> 
+                           <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="R_M_S_Sign-in.html">
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>    
+        </div>
+    </header>
+    <div class="container">
+    <div class="orders">
+        <h2>Your Orders</h2>
+        <div class="div_item">
+        <ul id="orders-list"></ul>
+        <div class="add-item">
+            <label for="food-item">Add More Items:</label>
+            <select id="food-item">
+                <option>-</option>
+                <option value="Dal Bati|200">Dal Bati - ₹200</option>
+                <option value="Chole Bhature|350">Chole Bhature - ₹350</option>
+                <option value="Rajma Chawal|250">Rajma Chawal - ₹250</option>
+                <option value="Rabdi|200">Rabdi - ₹200</option>
+                <option value="Handvo|250">Handvo - ₹250</option>
+                <option value="Dal Bhat|300">Dal Bhat - ₹300</option>
+                <option value="Samosa Chaat|200">Samosa Chaat - ₹200</option>
+                <option value="Undhiyu|300">Undhiyu - ₹300</option>
+                <option value="Raj Kachori|250">Raj Kachori- ₹250</option>
+                <option value="Patra|250">Patra - ₹250</option>
+            </select>
+        </div>
+        <p id="total-price">Total: $0</p>
+    </div>
+    <button class="add-button" onclick="addItem()">Add</button>
+
+    <button class="add-button" onclick="clearOrders()">Clear Orders</button>
+    </div>
+    
+  
+    <div class="billing-info">
+        <h3>Bill</h3>
+        <div class="div_item">
+        <p id="gst-amount" value="13.08">GST and restaurant charges: ₹13.08</p>
+        <p id="delivery-amount" value="50">Delivery Fee: ₹50</p>
+        </div>
+        <h2 id="final-bill">Final Bill: ₹0</h2>
+        <br><br>
+        <a href="payment.html"><button class="button-29" class="pay">Pay</button></a>
+    </div>
+    </div>
+    <div class="btn-33">
+    <!-- Button to open the address dialog -->
+    <a href="http://localhost/cwh/address.php"><button class="button-33" onclick="openDialog()">Deliver at  <i class="fa fa-map-marker" ></i></button></a>
+    </div>
+    <!-- The address dialog -->
+    <!-- <div id="address-dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close" onclick="closeDialog()">&times;</span>
+            <h2>Enter Your Address</h2>
+            <form id="address-form">
+                <div class="user-box">
+                <label for="city">City:</label>
+                <select id="city" required>
+                    <option>Ahemdabad</option>
+                    <option>Bhavnagar</option>
+                    <option>Gandhinagar</option>
+                    <option>Junagadh</option>
+                    <option>Jamnagar</option>
+                    <option>Rajkot</option>
+                    <option>Surat</option>
+                </select>
+                </div>
+                <br><br>
+                <div class="user-box">
+                <label for="pin-code">Pin Code:</label>
+                <input type="text" id="pin-code" name="pin-code" required><br><br>
+                </div>
+                <div class="user-box">
+                <label for="area">Area:</label>
+                <input type="text" id="area" name="area" required><br><br>
+                </div>
+                <div class="user-box">
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required><br><br>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div> -->
+
+    <div class="footer">
+        <div class="footer-1">
+            <div class="logo">
+                <img src="C:\Users\ruket\practice\Inovative assingment\photos\logo vertical 2.png" alt="">
+            </div>
+            <div>
+                <address>
+                    <p>Email:Ruket130@gmail.com</p>
+                    <p>YouTube:ABC</p>
+                    <p>Miss. Ruchi Ketan,<br>My Street, Diu <br>India</p>
+                </address>
+            </div>
+        </div>
+        <div class="footer-2">
+            <img src="C:\Users\ruket\practice\Inovative assingment\photos\logo vertical 2.png" alt="">
+            <h2>Powered by <em>Ruchi Ketan</em></h2>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

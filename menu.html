@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="Restaurant_management_system.html">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                           <input type="search"> 
+                           <!-- <i class="fa-solid fa-magnifying-glass srchicon"></i> -->
+                        </div>
+                        <a href="http://localhost/cwh/Sign-in.php">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="Restaurant_management_system.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="aboutus.html">
+                            <li>About Us</li>
+                        </a>
+                        <a href="menu.html">
+                            <li>Food menu</li>
+                        </a>
+                        <a href="http://localhost/cwh/book.php">
+                            <li>Book table</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+                <div class="logo">
+                    <img src="C:\xampp\htdocs\cwh\photos\logoo.png">
+                </div>
+                <div class="bar">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-xmark" id="hdcross"></i> 
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="Restaurant_management_system.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="aboutus.html">
+                            <li>About Us</li>
+                        </a>
+                        <a href="menu.html">
+                            <li>Food menu</li>
+                        </a>
+                        <a href="http://localhost/cwh/book.php">
+                            <li>Book table</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="account">
+                    <ul>
+                        <a href="Restaurant_management_system.html">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i  id="searchicon2"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput2">
+                           <input type="search"> 
+                           <!-- <i class="fa-solid fa-magnifying-glass srchicon"></i> -->
+                        </div>
+                        <a href="http://localhost/cwh/Sign-in.php">
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>    
+        </div>
+    </header>
+    <div class="menu_page">
+        <h1>Food Menu</h1>
+        <div class="menu_items">
+            <div class="item">
+                <div>
+                    <img src="C:\xampp\htdocs\cwh\photos\.vscode\dal-bati-churma.jpg" alt="">
+                </div>
+                <div class="menu_name">
+                    <!-- <i class="fa fa-star"></i>
+                <i class="fa fa-heart"></i>    -->
+                <h3>Dal Bati</h3>
+                <p class="fav-price">Rs.200</p>
+                <button class="add-button" onclick="addToOrder('Dal Bati', 200)">Add</button>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="C:\xampp\htdocs\cwh\photos\.vscode\chole bhature.jpg" alt="">
+                </div>
+                <div class="menu_name">
+                <h3>Chole Bhature</h3>
+                <p class="fav-price">Rs.350</p>
+                <button class="add-button" onclick="addToOrder('Chole Bhature', 350)">Add</button>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="C:\xampp\htdocs\cwh\photos\.vscode\Rajmachawal.jpg" alt="">
+                </div>
+                <div class="menu_name">
+                <h3>Rajma Chawal</h3>
+                <p class="fav-price">Rs.250</p>
+                <button class="add-button" onclick="addToOrder('Rajma Chawal', 250)">Add</button>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="C:\xampp\htdocs\cwh\photos\.vscode\rabri.jpg" alt="">
+                </div>
+                <div class="menu_name">
+                <h3>Rabdi</h3>
+                <p class="fav-price">Rs.200</p>
+                <button class="add-button" onclick="addToOrder('Rabdi', 200)">Add</button>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="C:\xampp\htdocs\cwh\photos\.vscode\handvo.jpeg" alt="">
+                </div>
+                <div class="menu_name">
+                <h3>Handvo</h3>
+                <p class="fav-price">Rs.250</p>
+                <button class="add-button" onclick="addToOrder('Handvo', 250)">Add</button>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="C:\xampp\htdocs\cwh\photos\.vscode\dal bhat.jpeg" alt="">
+                </div>
+                <div class="menu_name">
+                <h3>Dal Bhat</h3>
+                <p class="fav-price">Rs.300</p>
+                <button class="add-button" onclick="addToOrder('Dal Bhat', 300)">Add</button>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="C:\xampp\htdocs\cwh\photos\.vscode\samosa chat.jpg" alt="">
+                </div>
+                <div class="menu_name">
+                <h3>Samosa Chaat</h3>
+                <p class="fav-price">Rs.200</p>
+                <button class="add-button" onclick="addToOrder('Samosa Chaat', 200)">Add</button>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="C:\xampp\htdocs\cwh\photos\.vscode\Undhiyu.jpg" alt="">
+                </div>
+                <div class="menu_name">
+                <h3>Undhiyu</h3>
+                <p class="fav-price">Rs.300</p>
+                <button class="add-button" onclick="addToOrder('Undhiyu', 300)">Add</button>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="C:\xampp\htdocs\cwh\photos\.vscode\kachori chaat.jpeg" alt="">
+                </div>
+                <div class="menu_name">
+                <h3>Raj Kachori</h3>
+                <p class="fav-price">Rs.250</p>
+                <button class="add-button" onclick="addToOrder('Raj Kachori', 250)">Add</button>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="C:\xampp\htdocs\cwh\photos\.vscode\Patra.jpeg" alt="">
+                </div>
+                <div class="menu_name">
+                <h3>Patra</h3>
+                <p class="fav-price">Rs.250</p>
+                <button class="add-button" onclick="addToOrder('Patra', 250)">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="view-orders-link"><a href="orders.html">View Your Orders</a></div>
+    <div class="footer">
+        <div class="footer-1">
+            <div class="logo">
+                <img src="C:\xampp\htdocs\cwh\photos\.vscode\rklogo.png" alt="">
+            </div>
+            <div>
+                <address>
+                    <p>Email:Ruket130@gmail.com</p>
+                    <p>Silver oak university</p>
+                    <p>Miss. Ruchi Ketan,<br>Ahemdabad,Gota <br>India</p>
+                </address>
+            </div>
+        </div>
+        <div class="footer-2">
+            <img src="C:\xampp\htdocs\cwh\photos\.vscode\rk.png" alt="">
+            <h2>Powered by <em>Ruchi Ketan</em></h2>
+            <p>&copy;Copyright 2024 <br> All Rights Reserved</p>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
